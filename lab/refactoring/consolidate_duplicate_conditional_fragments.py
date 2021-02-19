@@ -11,13 +11,11 @@ def mixer_ice_with_cream():
 def make_drink(drink, addons):
     if 'coffee' in drink:
         mix = []
-        mix = add(mix, 'coffee')
-        mix = add(mix, addons)
+        mix = add(mix, ['coffee'] + addons)
     if 'strawberry milkshake' in drink:
         mix = []
         mix = mixer_ice_with_cream()
-        mix = add(mix, 'strawberry')
-        mix = add(mix, addons)
+        mix = add(mix, ['strawberry'] + addons)
     return mix
 
 final_drink = make_drink('strawberry milkshake', ['milk','sugar'])

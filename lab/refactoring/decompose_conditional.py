@@ -7,9 +7,16 @@ def make_alert_sound():
 def make_accept_sound():
     print('made acceptance sound')
 
-ingredients = ['sodium benzoate']
-if 'sodium nitrate' in ingredients or 'sodium benzoate' in ingredients\
-or 'sodium oxide' in ingredients:
+ingredients = [
+    'sodium benzoate'
+]
+toxins = [
+    'sodium nitrate', 
+    'sodium benzoate', 
+    'sodium oxide'
+]
+
+if toxins in ingredients:
     print('!!!')
     print('there is a toxin in the food!')    
     print('!!!')

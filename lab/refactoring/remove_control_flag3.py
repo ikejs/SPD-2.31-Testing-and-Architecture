@@ -2,7 +2,7 @@
 # Remove control flag
 # Reference: https://searchcode.com/file/92870153/frameworkconsole/framework.py/
 
-def backdoor_srcmethod():
+def prompt_for_apk():
     running = True
     while running:
         print( "Puts the Android Agent inside an Android App APK. The application runs normally, with extra functionality.")
@@ -12,4 +12,4 @@ def backdoor_srcmethod():
         else:
             print('doing other stuff.') 
 
-backdoor_srcmethod()
+prompt_for_apk()
