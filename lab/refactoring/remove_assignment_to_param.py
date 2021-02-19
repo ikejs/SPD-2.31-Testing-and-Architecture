@@ -8,7 +8,8 @@ class Mass:
     def __init__(self, value, unit):
         self.value = value
         self.unit = unit
-def calculate_kinetic_energy(mass, distance, time):
+
+def calculate_speed(distance, time):
     if distance.unit != 'km':
         if distance.unit == "ly":  # [ly] stands for light-year (measure of distance in astronomy)
             # convert from light-year to km unit        
@@ -17,7 +18,10 @@ def calculate_kinetic_energy(mass, distance, time):
         else:
             print ("unit is Unknown")
             return
-    speed = distance.value/time # [km per sec]
+    return distance.value/time
+
+def calculate_kinetic_energy(mass, distance, time):
+    speed = calculate_speed(distance, time) # [km per sec]
     if mass.unit != 'kg':
         if mass.unit == "solar-mass":
             # convert from solar mass to kg
